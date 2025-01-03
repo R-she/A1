@@ -1,0 +1,15 @@
+body {
+    background-color: #fffacd;
+}
+.h1 {
+    background-color: #f5deb3;
+    color: brown;
+    border: 1px solid brown;
+    border-radius: 6px;
+}
+img {
+    width: 400px;
+    height: 300px;
+    border: 3px solid brown;
+    border-radius: 10px;
+}

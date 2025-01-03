@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>圖片切換</title>
+    <style>
+        .image-container {
+            text-align: center;
+            margin-top: 20px;
+        }
+        img {
+            max-width: 100%;
+            height: auto;
+            width: 500px;
+        }
+        .buttons {
+            margin-top: 10px;
+        }
+        button {
+            padding: 10px 20px;
+            font-size: 16px;
+            cursor: pointer;
+            margin: 0 10px;
+        }
+        
+    </style>
+</head>
+<body>
+
+    <div class="image-container">
+        <img id="image" src="img/1.jpg" alt="圖片" />
+    </div>
+
+    <div class="buttons">
+        <button onclick="prevImage()">上一張</button>
+        <button onclick="nextImage()">下一張</button>
+    </div>
+
+    <script>
+        const images = ["img/1.jpg", "img/2.jpg", "img/3.jpg"];
+        let currentIndex = 0;
+
+        function prevImage() {
+            if (currentIndex > 0) {
+                currentIndex--;
+            } else {
+                currentIndex = images.length - 1;
+            }
+            document.getElementById("image").src = images[currentIndex];
+        }
+
+        function nextImage() {
+            if (currentIndex < images.length - 1) {
+                currentIndex++;
+            } else {
+                currentIndex = 0;
+            }
+            document.getElementById("image").src = images[currentIndex];
+        }
+    </script>
+
+</body>
+</html>
+
